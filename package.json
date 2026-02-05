@@ -11,13 +11,15 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "express-router": "^0.0.1",
     "jest": "^29.7.0",
     "mongoose": "^8.19.2",
-    "node-mocks-http": "^1.17.2"
+    "node-mocks-http": "^1.17.2",
+    "router": "^2.2.0"
   },
   "devDependencies": {
-    "supertest": "^7.1.4"
+    "supertest": "^7.2.2"
   }
 }

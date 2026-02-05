@@ -27,16 +27,16 @@ describe("TodoController", ()=>{
         TodoController.createTodo(req,res,next)
         expect(TodoModel.create).toBeCalledWith(newTodo);
     })
-    it ("should return status 201 code", ()=>{
-        TodoController.createTodo(req,res,next)
+    it ("should return status 201 code", async ()=>{
+        await TodoController.createTodo(req,res,next)
         TodoModel.create(req.body)
         
         expect(res.statusCode).toBe(201);
     })
 
-    it ("should return json body in response", ()=>{
+    it ("should return json body in response", async  ()=>{
         TodoModel.create.mockReturnValue(newTodo)
-        TodoController.createTodo(req,res,next)
+        await TodoController.createTodo(req,res,next)
     
         expect(res._getJSONData()).toEqual(newTodo);
     })
